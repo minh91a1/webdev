@@ -1,0 +1,59 @@
+body {
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: 
+    "header header header header header header header header header header"
+    ". . main main main main . . sidebar sidebar"
+    "footer1 footer1 footer1 contact contact contact contact footer2 footer2 footer2";
+
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.grid-item-01 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    background: yellowgreen;
+    z-index: 1;
+    max-width: 100px;
+
+    justify-self: right;
+    align-self: center;
+    
+    text-align: right;
+}
+
+.grid-item-02 {
+    grid-area: header;
+    background: orangered;
+}
+
+.grid-item-03 {
+    grid-area: footer1;
+    background: dodgerblue;
+}
+
+.grid-item-04 {
+    grid-area: main;
+    background: goldenrod;
+}
+
+.grid-item-05 {
+    grid-area: sidebar;
+    background: darkcyan;
+}
+
+.grid-item-06 {
+    grid-area: contact;
+    background: blueviolet;
+}
+
+.grid-item-07 {
+    grid-area: footer2;
+    background: dodgerblue;
+}
